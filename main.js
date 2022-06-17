@@ -1,19 +1,19 @@
 
 // Create canvas variable
 var canvas= new fabric.Canvas('myCanvas');
- blockY=1;
- blockX=1;
+ block_y=1;
+ block_x=1;
 
-blockImageWidth = 350;
-blockImageHeight = 430;
+block_image_width = 350;
+block_image_height = 430;
 
-var blockImageObject= "";
+var block_image_object= "";
 
-function newImage(getImage)
+function newImage(get_image)
 {
 	// para enviar imagens
 	fabric.Image.fromURL(get_image, function(Img) {
-    block_image_object = Img;
+    	block_image_object = Img;
 
 	block_image_object.scaleToWidth(block_image_width);
 	block_image_object.scaleToHeight(block_image_height);
@@ -41,7 +41,7 @@ console.log(keyPressed);
 	}
 	if(keyPressed == '86')
 	{
-		blockX = 200;
+		block_x = 200;
 		// enviar ranger verde
 		new_image('gr.png');
 		console.log("g");
@@ -49,21 +49,21 @@ console.log(keyPressed);
 	
 	if(keyPressed == '65')
 	{
-		blockX =350;
+		block_x =350;
 		// enviar ranger amarelo 
 		new_image('yr.png');
 		console.log("y");
 	}
 	if(keyPressed == '82')
 	{
-		blockX = 600;
+		block_x = 600;
 		// enviar ranger rosa
 		new_image('pr.png');
 		console.log("p");
 	}
 	if(keyPressed == '73')
 	{
-		blockX = 700;
+		block_x = 700;
 	// enviar ranger índigo
 	new_image('br.png');
 	console.log("b");
